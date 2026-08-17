@@ -3,7 +3,7 @@ name = "virtio-queue"
 version = "0.18.0"
 authors = ["The Chromium OS Authors"]
 description = "virtio queue implementation"
-repository = "https://github.com/rust-vmm/vm-virtio"
+repository.workspace = true
 keywords = ["virtio"]
 readme = "README.md"
 license = "Apache-2.0 AND BSD-3-Clause"
@@ -16,7 +16,7 @@ test-utils = []
 vm-memory = { workspace = true }
 vmm-sys-util = { workspace = true }
 log = "0.4.17"
-virtio-bindings = { path="../virtio-bindings", version = "0.2.6" }
+virtio-bindings = { workspace = true }
 
 [dev-dependencies]
 criterion = "0.8.0"
@@ -30,6 +30,7 @@ vm-memory = { workspace = true, features = ["backend-mmap"] }
 [[bench]]
 name = "main"
 harness = false
+required-features = ["test-utils"]
 
 # From https://model-checking.github.io/kani/usage.html#configuration-in-cargotoml
 #
