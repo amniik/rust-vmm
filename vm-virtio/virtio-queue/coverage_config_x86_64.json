@@ -1,0 +1,5 @@
+{
+    "coverage_score": 96.67,
+    "exclude_path": "src/mock\\.rs",
+    "crate_features": ""
+}
