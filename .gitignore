@@ -6,3 +6,4 @@ Cargo.lock
 # seccompiler/tools/generate_syscall_tables.sh.
 .kernel
 .DS_Store
+kcov_output
